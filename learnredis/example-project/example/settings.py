@@ -63,4 +63,4 @@ REDIS_PORT = 6379
 AJAXCRAWL_ENABLED = True
 # Introduce an artifical delay to make use of parallelism. to speed up the
 # crawl.
-DOWNLOAD_DELAY = 5
+DOWNLOAD_DELAY = 3
