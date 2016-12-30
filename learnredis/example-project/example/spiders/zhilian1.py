@@ -15,7 +15,7 @@ class MySpider(scrapy.Spider):
 	#处理每种职业的页面
 	def parse(self,response):
 		pagenum = response.xpath("//body/div[3]/div[3]/div[2]/form/div[1]/div[1]/div[3]/ul/li[6]/a/text()").extract_first()
-		if int(pagenum) <= 50:
+		if int(pagenum) <= 85:
 			jobsurl = response.css("td.zwmc>div>a::attr(href)").extract()
 			for joburl in jobsurl:
 				yield scrapy.Request(joburl,callback=self.parsejob)
